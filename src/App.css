@@ -1,0 +1,353 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ********************Landing page css********************* */
+.backGround {
+  width: 90%;
+  height: 400px;
+  padding: 20px;
+  margin: 15px auto;
+  box-shadow: 0px 0px 10px 2px grey;
+  border: 10px;
+  background-image: url("./images/coralReef.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+.centertext {
+  color: beige;
+  text-align: center;
+  margin-top: 150px;
+  font-size: 30px;
+  font-family: "Open Sans";
+}
+
+.Cate {
+  font-size: 25px;
+  color: grey;
+  margin-left: 135px;
+}
+@media screen and (max-width: 500px) {
+  .Cate {
+    text-align: center;
+    margin-left: 0px;
+  }
+}
+/* ******************categories landing images******************* */
+.flex-container{
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  margin: auto;
+  
+}
+.box {
+  background-color: #f1f1f1;
+  width: 280px;
+  margin: 30px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+
+}
+
+.flexImg{
+  width: 100%;
+  margin: 10px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+
+
+/* *********************************nav bar********************************** */
+.navbar {
+  box-shadow: 0px 0px 10px 1px grey;
+}
+
+.loginandlogoff {
+  margin: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .dot {
+    margin-left: 800px;
+  }
+}
+
+
+.customim {
+  float: left;
+}
+.description {
+  margin-top: 60px;
+}
+
+
+
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.shoppingCartImage{
+  height: 25px;
+  width: 30px;
+}
+
+/* *********************StockPage dashBoard********* */
+/* coral list */
+.flex-container2{
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+  
+  
+}
+
+.postcoral {
+  margin: 10px;
+  float: left;
+  border: 2px solid grey;
+  border-radius: 5px;
+  flex-basis: auto;
+  width: 45%;
+  padding: 25px;
+  height: 20%;
+}
+@media (max-width: 1024px) {
+  .postcoral {
+  width: 100%;
+ 
+    
+  }
+  }
+
+  .imagepost {
+    width: 140px;
+    height: 110px;
+    /* float: right; */
+    margin-left: 60%;
+  }
+
+  @media (max-width: 1024px) {
+    .imagepost {
+      margin-left: auto;
+      margin-right: auto;
+   
+      
+    }
+    }
+  
+
+
+
+.spinner{
+  float:right;
+  height: 25px;
+}
+
+/* ************** coral Search Bar************** */
+
+.coralSearchBar{
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+
+
+
+/* ******************* stock list************* */
+
+.flexbox{
+  margin: 0 auto;
+  width: 75%;
+  display: flex;
+  margin-top: 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .flexbox {
+  width: 100%
+    
+  }
+  }
+
+.box2{
+  background-color: #f1f1f1;
+  border: 1px #40E0D0 solid;
+  padding: 10px;
+  flex-basis: 25%;
+  height: 450px;
+  margin: 10px;
+  width: 200px
+  
+}
+
+@media (max-width: 1024px) {
+  .box2 {
+    width: 100%;
+    
+  }
+  }
+
+.imageSize{
+width: 100%;
+  height: 75%;
+  
+}
+@media (max-width: 1024px) {
+  .imageSize {
+    width: 300px;
+    
+  }
+}
+
+.pagination{
+  justify-content: center;
+  display: flex;
+}
+
+/* *****************************CoralInfoPage******* */
+.flex-container3 {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  margin-top: 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+}
+
+.coralPageBox{
+  background-color: #ffffff;
+  height: 450px;
+  margin: 10px;
+  border-radius: 5px;
+ 
+
+  
+}
+@media (max-width: 1024px) {
+  .coralPageBox {
+    height: 100%;
+    
+  }
+}
+
+.coralPageBox2{
+
+  padding: 10px;
+  height: 150px;
+  margin-top: 150px;
+ 
+
+}
+
+@media (max-width: 1024px) {
+  .coralPageBox2 {
+    margin-top: 0px;
+    
+  }
+}
+
+
+.coralPageImage{
+  height: 100%;
+  border-radius: 5px;
+
+  
+  
+}
+
+@media (max-width: 1024px) {
+  .coralPageImage {
+    width: 300px;
+    height: 80%;
+  }
+}
+
+.descriptionBox{
+ margin-top: 50px;
+  margin: 0 auto;
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+@media (max-width: 1024px) {
+  .descriptionBox {
+    width: 80%;
+    
+  }
+}
+
+.descriptionTitle{
+  background-color: #ffffff;
+  padding: 10px;
+  height: 100px;
+  /* margin: 10px; */
+  width: 200px;
+  margin: 0 auto;
+
+}
+
+@media (max-width: 1024px) {
+  .descriptionTitle {
+    width: 100%;
+    text-align: center;
+    
+  }
+}
+
+.description{
+  background-color: #ffffff;
+  padding: 10px;
+  height: 100px;
+  margin: 10px;
+  width: 200px;  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .description {
+    width: 100%;
+    text-align: center;
+    
+  }
+}
