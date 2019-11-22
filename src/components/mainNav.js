@@ -5,16 +5,13 @@ import { connect } from "react-redux";
 import { logoutUser } from "../actions/authActions";
 
 // ***********images***********
-import ShoppingCart from "../images/icons8-shopping-cart-100.png"
-
-
-
+import ShoppingCart from "../images/icons8-shopping-cart-100.png";
 
 class MainNav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      shoppingCartList: null
+      shoppingCartList: []
     };
   }
   onLogOutClick(e) {
@@ -25,28 +22,29 @@ class MainNav extends React.Component {
   }
 
   onClick = e => {
-    e.preventDefault()
-
-  }
+    e.preventDefault();
+  };
 
   componentDidMount() {
     if (this.state.shoppingCartList == null) {
       this.setState({
         shoppingCartList: "0"
-      })
+      });
     } else {
-
     }
   }
-
+  componentDidUpdate = prevProps => {
+    if (prevProps.selected !== this.props.selected) {
+      this.setState({
+        shoppingCartList: this.props.selected
+      });
+    }
+  };
 
   //function to called from default class (with args)
   functionWithArg = oneCoral => {
-    console.log(oneCoral)
-
+    console.log(oneCoral);
   };
-
-
 
   render() {
     const { isAuthenticated } = this.props.auth;
@@ -78,10 +76,7 @@ class MainNav extends React.Component {
       </a>
     );
 
-
-
     return (
-
       <React.Fragment>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <button
@@ -106,7 +101,6 @@ class MainNav extends React.Component {
                   Live Stock
                 </a>
               </li>
-
             </ul>
             <form className="form-inline my-2 my-lg-0">
               <button
@@ -114,7 +108,7 @@ class MainNav extends React.Component {
                 onClick={this.onClick}
               >
                 <img className="shoppingCartImage" src={ShoppingCart} alt="" />
-                {this.state.shoppingCartList}
+                {this.state.shoppingCartList.length}
               </button>
 
               {isAuthenticated ? authLinks : guestLinks}
@@ -136,7 +130,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps,
-  { logoutUser }
-)(MainNav);
+export default connect(mapStateToProps, { logoutUser })(MainNav);
