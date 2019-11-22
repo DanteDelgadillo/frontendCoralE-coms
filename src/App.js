@@ -34,8 +34,11 @@ if (localStorage.jwtToken) {
   // }
 }
 
-
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   render() {
     return (
       <Provider store={store}>
