@@ -37,16 +37,23 @@ if (localStorage.jwtToken) {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      selectedItems: []
+    };
   }
   render() {
+    const addItem = item => {
+      this.setState({
+        selectedItems: [...this.state.selectedItems, item]
+      });
+    };
     return (
       <Provider store={store}>
         <React.Fragment>
-          <MainNav />
+          <MainNav selected={this.state.selectedItems} />
           <BrowserRouter>
             <div>
-              <Main />
+              <Main add={item => addItem(item)} />
             </div>
           </BrowserRouter>
           <Footer />

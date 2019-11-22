@@ -8,11 +8,10 @@ import LandingPage from "../containers/landingpage";
 import StockPage from "../containers/stockpage";
 import test from "../containers/test";
 import CoralStock from "../containers/coralStock";
-import CoralInfoPage from "../containers/coralPage"
+import CoralInfoPage from "../containers/coralPage";
 
-const Main = () => (
+const Main = ({ add }) => (
   <React.Fragment>
-    {/* ****************landing page****************** */}
     <Switch>
       <Route exact path="/" component={LandingPage} />
     </Switch>
@@ -20,7 +19,11 @@ const Main = () => (
     <Route exact path="/CoralInfoPage" component={CoralInfoPage} />
     <Route exact path="/stock" component={StockPage} />
     <Route exact path="/test" component={test} />
-    <Route exact path="/coralStock" component={CoralStock} />
+    <Route
+      exact
+      path="/coralStock"
+      render={props => <CoralStock {...props} add={add} />}
+    />
   </React.Fragment>
 );
 
