@@ -13,7 +13,7 @@ import ProductPage from "../components/ProductPageComponent"
 import CheckoutPage from "../components/CheckoutPageComponent"
 
 
-const Main = ({ add, selected }) => (
+const Main = ({ add, selected, remove }) => (
   <React.Fragment>
     <Switch>
       <Route exact path="/" component={LandingPage} />
@@ -28,7 +28,7 @@ const Main = ({ add, selected }) => (
     />
     <Route
       exact path="/ShoppingCart"
-      render={props => <ShoppingCart {...props} selected={selected} />}
+      render={props => <ShoppingCart {...props} selected={selected} remove={remove} />}
     />
 
     {/* ******************test pages*********** */}

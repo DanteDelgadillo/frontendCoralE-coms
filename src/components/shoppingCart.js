@@ -35,7 +35,7 @@ export default class ShoppingCart extends Component {
                                     <tr>
                                         <td><h6>{shopCoral.coralname}</h6></td>
                                         <td><h6>${shopCoral.price}</h6></td>
-                                        <td><button type="button" className="btn btn-danger">Delete</button></td>
+                                        <td><button type="button" onClick={() => this.props.remove(shopCoral._id)} className="btn btn-danger">Delete</button></td>
                                     </tr>
                                 </tbody>
                             )

@@ -65,13 +65,32 @@ class App extends Component {
 
     };
 
+
+    const removeItem = item => {
+      const _id = item;
+      const array = this.state.selectedItems;
+      const newArray = array.map(x => {
+        return x._id;
+      }).indexOf(_id);
+
+      array.splice(newArray, 1);
+      localStorage.setItem("cart", JSON.stringify(array))
+      console.log(array);
+      this.setState({
+        selectedItems: this.state.selectedItems
+      })
+    }
+
+
+
+
     return (
       <Provider store={store}>
         <React.Fragment>
           <MainNav selected={this.state.selectedItems} />
           <BrowserRouter>
             <div>
-              <Main add={item => addItem(item)} selected={this.state.selectedItems} />
+              <Main add={item => addItem(item)} remove={item => removeItem(item)} selected={this.state.selectedItems} />
             </div>
           </BrowserRouter>
           {/* <Footer /> */}
