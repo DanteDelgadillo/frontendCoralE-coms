@@ -208,13 +208,21 @@
 
 .box2{
   background-color: #f1f1f1;
-  border: 1px #40E0D0 solid;
   padding: 10px;
   flex-basis: 25%;
   height: 450px;
   margin: 10px;
   width: 200px
   
+}
+.divider{
+  width:5px;
+  height:auto;
+  display:inline-block;
+}
+
+.buttonBox{
+  text-align: center
 }
 
 @media (max-width: 1024px) {

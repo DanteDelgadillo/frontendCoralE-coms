@@ -10,26 +10,28 @@ const Stock = props => (
         <center>
             <h4>{props.oneCoral.coralname}</h4>
             <h4>${props.oneCoral.price}</h4>
-        </center>
-        <center>
-            <Link
-                to={{
-                    pathname: "CoralInfoPage",
-                    param2: props.oneCoral
-                }}
-            >
-                <button type="button" className="btn btn-success">
-                    More Info
+
+            <div className="buttonBox">
+                <Link
+                    to={{
+                        pathname: "CoralInfoPage",
+                        param2: props.oneCoral
+                    }}
+                >
+                    <button type="button" className="btn btn-success">
+                        More Info
         </button>
-            </Link>
-            <button
-                type="button"
-                className="btn btn-primary"
-                // onClick={() => props.copyBasket(props.oneCoral)}
-                onClick={() => props.add(props.oneCoral)}
-            >
-                Add To Cart
+                    <div className="divider" />
+                </Link>
+                <button
+                    type="button"
+                    className="btn btn-primary"
+                    // onClick={() => props.copyBasket(props.oneCoral)}
+                    onClick={() => props.add(props.oneCoral)}
+                >
+                    Add To Cart
       </button>
+            </div>
         </center>
     </div>
 );
