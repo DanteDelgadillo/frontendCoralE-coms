@@ -33,6 +33,8 @@ class MainNav extends React.Component {
     } else {
     }
   }
+
+  // ******props update change state********
   componentDidUpdate = prevProps => {
     if (prevProps.selected !== this.props.selected) {
       this.setState({
@@ -103,13 +105,13 @@ class MainNav extends React.Component {
               </li>
             </ul>
             <form className="form-inline my-2 my-lg-0">
-              <button
+              <a
                 className="btn btn-warning my-2 my-sm-0"
-                onClick={this.onClick}
+                href="/ShoppingCart"
               >
                 <img className="shoppingCartImage" src={ShoppingCart} alt="" />
                 {this.state.shoppingCartList.length}
-              </button>
+              </a>
 
               {isAuthenticated ? authLinks : guestLinks}
               {isAuthenticated ? authLinks2 : ""}

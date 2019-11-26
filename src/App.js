@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import MainNav from "./components/mainNav";
 import Main from "./components/main";
-import Footer from "./components/footer";
+// import Footer from "./components/footer";
 
 import { Provider } from "react-redux";
 import store from "./store";
@@ -41,22 +41,40 @@ class App extends Component {
       selectedItems: []
     };
   }
+
+
+  // componentDidMount() {
+  //   this.fetchData()
+  // }
+  componentDidMount = () => {
+    if (localStorage.getItem("cart") != null) {
+      this.setState({
+        selectedItems: JSON.parse(localStorage.getItem("cart"))
+      })
+    }
+  }
+
   render() {
     const addItem = item => {
       this.setState({
         selectedItems: [...this.state.selectedItems, item]
-      });
+      }, () => {
+        const dog = this.state.selectedItems;
+        localStorage.setItem("cart", JSON.stringify(dog))
+      }, [this.state.selectedItems]);
+
     };
+
     return (
       <Provider store={store}>
         <React.Fragment>
           <MainNav selected={this.state.selectedItems} />
           <BrowserRouter>
             <div>
-              <Main add={item => addItem(item)} />
+              <Main add={item => addItem(item)} selected={this.state.selectedItems} />
             </div>
           </BrowserRouter>
-          <Footer />
+          {/* <Footer /> */}
         </React.Fragment>
       </Provider>
     );

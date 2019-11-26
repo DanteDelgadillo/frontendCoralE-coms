@@ -6,11 +6,14 @@ import { Switch, Route } from "react-router-dom";
 import Login from "../containers/login";
 import LandingPage from "../containers/landingpage";
 import StockPage from "../containers/stockpage";
-import test from "../containers/test";
 import CoralStock from "../containers/coralStock";
 import CoralInfoPage from "../containers/coralPage";
+import ShoppingCart from "../components/shoppingCart"
+import ProductPage from "../components/ProductPageComponent"
+import CheckoutPage from "../components/CheckoutPageComponent"
 
-const Main = ({ add }) => (
+
+const Main = ({ add, selected }) => (
   <React.Fragment>
     <Switch>
       <Route exact path="/" component={LandingPage} />
@@ -18,12 +21,19 @@ const Main = ({ add }) => (
     <Route exact path="/login" component={Login} />
     <Route exact path="/CoralInfoPage" component={CoralInfoPage} />
     <Route exact path="/stock" component={StockPage} />
-    <Route exact path="/test" component={test} />
     <Route
       exact
       path="/coralStock"
       render={props => <CoralStock {...props} add={add} />}
     />
+    <Route
+      exact path="/ShoppingCart"
+      render={props => <ShoppingCart {...props} selected={selected} />}
+    />
+
+    {/* ******************test pages*********** */}
+    <Route exact path="/ProductPage" component={ProductPage} />
+    <Route exact path="/CheckoutPage" component={CheckoutPage} />
   </React.Fragment>
 );
 

@@ -243,11 +243,15 @@ width: 100%;
 }
 
 /* *****************************CoralInfoPage******* */
+.coralPageInfoBox{
+  margin-top: 30px;
+}
+
 .flex-container3 {
   margin: 0 auto;
   width: 100%;
   display: flex;
-  margin-top: 5%;
+  margin-top: 3%;
   flex-wrap: wrap;
   justify-content: center;
 
@@ -272,9 +276,11 @@ width: 100%;
 
 .coralPageBox2{
 
-  padding: 10px;
-  height: 150px;
-  margin-top: 150px;
+  padding: 50px;
+  height: 450px;
+  width: 15%;
+  margin-top: 10px;
+  background-color: rgba(103,159,220,0.35);
  
 
 }
@@ -282,14 +288,14 @@ width: 100%;
 @media (max-width: 1024px) {
   .coralPageBox2 {
     margin-top: 0px;
-    
+    width: 300px;
   }
 }
 
 
 .coralPageImage{
   height: 100%;
-  border-radius: 5px;
+  
 
   
   
@@ -302,21 +308,7 @@ width: 100%;
   }
 }
 
-.descriptionBox{
- margin-top: 50px;
-  margin: 0 auto;
-  width: 45%;
-  display: flex;
-  flex-wrap: wrap;
- 
-}
 
-@media (max-width: 1024px) {
-  .descriptionBox {
-    width: 80%;
-    
-  }
-}
 
 .descriptionTitle{
   background-color: #ffffff;
@@ -350,4 +342,34 @@ width: 100%;
     text-align: center;
     
   }
+}
+
+/* **************************shopping cart page************ */
+
+.shoppingCartBox{ 
+  margin:  0 auto ;
+  margin-top: 50px;
+  width: 40%;
+  background-color: #c1d4ea;
+  padding: 30px;
+}
+@media (max-width: 1024px) {
+  .shoppingCartBox {
+    width: 90%;
+    text-align: center;
+    
+  }
+}
+
+
+.shoppingCartBox2{
+text-align: center;
+
+
+}
+
+/* *************stroke*********** */
+.stroke{
+  stroke: black;
+  width: 75%;
 }
