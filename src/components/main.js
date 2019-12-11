@@ -19,7 +19,7 @@ const Main = ({ add, selected, remove }) => (
       <Route exact path="/" component={LandingPage} />
     </Switch>
     <Route exact path="/login" component={Login} />
-    <Route exact path="/CoralInfoPage" component={CoralInfoPage} />
+    <Route exact path="/CoralInfoPage" component={CoralInfoPage} add={add} />
     <Route exact path="/stock" component={StockPage} />
     <Route
       exact

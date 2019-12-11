@@ -45,8 +45,8 @@ export default class ShoppingCart extends Component {
 
                     <div className="shoppingCartBox2">
                         <div>
-                            <h2>Taxes = ${taxs}</h2>
-                            <h2>Shipping over night = $60</h2>
+                            <h6>Taxes = ${taxs}</h6>
+                            <h6>Shipping over night = $60</h6>
                             <h2>Total= ${sum + 60 + taxs}</h2>
                         </div>
                     </div>

@@ -8,13 +8,20 @@ class CoralPage extends Component {
         };
     }
 
-    componentDidMount() {
-        if (this.props.location.param2 == null) {
+    componentDidMount = () => {
+        if (!this.props.location.param2) {
+
+            this.setState({
+                coralData: JSON.parse(localStorage.getItem("item"))
+            })
 
         } else {
+
             this.setState({
                 coralData: this.props.location.param2
             })
+            localStorage.setItem("item", JSON.stringify(this.props.location.param2))
+
         }
     }
 
@@ -36,7 +43,7 @@ class CoralPage extends Component {
                             <p> {this.state.coralData.categories}</p>
                             <h5>${this.state.coralData.price}</h5>
                             <br />
-                            <button type="button" className="btn btn-primary" >Add To Cart</button>
+                            <button type="button" className="btn btn-primary" onClick={() => this.props.add(this.state.coralData)} >Add To Cart</button>
                         </div>
                     </div>
                 </div>

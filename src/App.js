@@ -43,9 +43,7 @@ class App extends Component {
   }
 
 
-  // componentDidMount() {
-  //   this.fetchData()
-  // }
+
   componentDidMount = () => {
     if (localStorage.getItem("cart") != null) {
       this.setState({
@@ -68,7 +66,7 @@ class App extends Component {
 
     const removeItem = item => {
       const _id = item;
-      const array = this.state.selectedItems;
+      const array = [...this.state.selectedItems];
       const newArray = array.map(x => {
         return x._id;
       }).indexOf(_id);
@@ -77,9 +75,23 @@ class App extends Component {
       localStorage.setItem("cart", JSON.stringify(array))
       console.log(array);
       this.setState({
-        selectedItems: this.state.selectedItems
+        selectedItems: array
       })
     }
+    // anther way to remove matt style
+    // const removeItem = item => {
+    //   let arr = [...this.state.selectedItems];
+    //    let index;
+    //   for (let [i, char] of arr.entries()) {
+    //     if (char._id === item) {
+    //       index = i;
+    //       break;
+    //     }
+    //   }
+    //   arr.splice(index, 1);
+    //   localStorage.setItem("cart", JSON.stringify(arr));
+    //    this.setState({ selectedItems: arr });
+    //  };
 
 
 

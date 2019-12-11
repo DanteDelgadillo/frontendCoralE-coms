@@ -193,7 +193,7 @@ class PostCoral extends Component {
   // ********************** validate***********************
 
 
-  validate = () => {
+  validate = (file) => {
     let coralnameError = "";
     let categoriesError = "";
     let priceError = "";
@@ -209,10 +209,10 @@ class PostCoral extends Component {
       categoriesError = "Field is Empty";
     }
 
-    if (!this.state.message) {
+    if (!this.state.price) {
       priceError = "Field is Empty";
     }
-    if (!this.state.imageError) {
+    if (!this.state.file) {
       imageError = "Field is Empty";
     }
     if (!this.state.descrption) {
