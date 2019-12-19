@@ -9,9 +9,6 @@ import StockPage from "../containers/stockpage";
 import CoralStock from "../containers/coralStock";
 import CoralInfoPage from "../containers/coralPage";
 import ShoppingCart from "../components/shoppingCart"
-import ProductPage from "../components/ProductPageComponent"
-import CheckoutPage from "../components/CheckoutPageComponent"
-
 
 const Main = ({ add, selected, remove }) => (
   <React.Fragment>
@@ -31,9 +28,7 @@ const Main = ({ add, selected, remove }) => (
       render={props => <ShoppingCart {...props} selected={selected} remove={remove} />}
     />
 
-    {/* ******************test pages*********** */}
-    <Route exact path="/ProductPage" component={ProductPage} />
-    <Route exact path="/CheckoutPage" component={CheckoutPage} />
+
   </React.Fragment>
 );
 

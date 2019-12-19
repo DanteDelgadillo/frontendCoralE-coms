@@ -53,7 +53,7 @@ class PostCoral extends Component {
       window.location.href = "/";
     }
 
-    axios.get("http://localhost:3001/getAllStock")
+    axios.get(`${process.env.REACT_APP_API_URL}/getAllStock`)
       .then(response => {
         this.setState({ coralStock: response.data })
       })

@@ -57,7 +57,7 @@ export default class coralStock extends Component {
 
     componentDidMount() {
         axios
-            .get("http://localhost:3001/getAllStock")
+            .get(`${process.env.REACT_APP_API_URL}/getAllStock`)
             .then(response => {
                 this.setState(
                     {
