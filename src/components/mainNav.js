@@ -54,7 +54,7 @@ class MainNav extends React.Component {
     const authLinks = (
       <a
         href="/"
-        className="btn btn-secondary loginandlogoff"
+        className="btn btn-secondary my-sm-0 loginandlogoff"
         role="button"
         onClick={this.onLogOutClick.bind(this)}
       >
@@ -62,7 +62,7 @@ class MainNav extends React.Component {
       </a>
     );
     const authLinks2 = (
-      <a href="/Stock" className="btn btn-info loginandlogoff" role="button">
+      <a href="/Stock" className="btn btn-info loginandlogoff my-sm-0" role="button">
         DashBoard
       </a>
     );
@@ -70,7 +70,7 @@ class MainNav extends React.Component {
     const guestLinks = (
       <a
         href="/login"
-        className="btn btn-primary btn-lg loginandlogoff"
+        className="btn btn-primary my-sm-0 loginandlogoff"
         role="button"
         aria-pressed="true"
       >
