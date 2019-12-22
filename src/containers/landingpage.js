@@ -31,7 +31,7 @@ class LandingPage extends Component {
     return (
       <React.Fragment>
         <div className="backGround">
-          <div className="centertext">Coral Selling site</div>
+          <div className="centertext">Deep Blue Aquarium</div>
         </div>
         <div className="Cate">Categories :</div>
 

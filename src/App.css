@@ -41,13 +41,14 @@
   background-image: url("./images/coralReef.jpg");
   background-size: cover;
   border-radius: 10px;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.192);
 }
 .centertext {
-  color: beige;
+  color: rgb(247, 247, 244);
   text-align: center;
   margin-top: 150px;
-  font-size: 30px;
-  font-family: "Open Sans";
+  font-size: 40px;
+  font-family: 'Carter One', cursive;
 }
 
 .Cate {
